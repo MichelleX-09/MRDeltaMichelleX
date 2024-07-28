@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B47D29602C56A8CF001B0ADA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D295F2C56A8CF001B0ADA /* LoginView.swift */; };
+		B47D29622C56AB37001B0ADA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D29612C56AB37001B0ADA /* SignUpView.swift */; };
+		B47D29642C56ACEC001B0ADA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B47D29632C56ACEC001B0ADA /* GoogleService-Info.plist */; };
+		B47D29672C56AEE5001B0ADA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B47D29662C56AEE5001B0ADA /* FirebaseAuth */; };
+		B47D29692C56AEE5001B0ADA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B47D29682C56AEE5001B0ADA /* FirebaseDatabase */; };
+		B47D296B2C56AEE5001B0ADA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B47D296A2C56AEE5001B0ADA /* FirebaseFirestore */; };
+		B47D296D2C56B1C6001B0ADA /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D296C2C56B1C6001B0ADA /* HomePageView.swift */; };
 		B4C616642C48B45000720154 /* MRDeltaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C616632C48B45000720154 /* MRDeltaApp.swift */; };
 		B4C616662C48B45000720154 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C616652C48B45000720154 /* ContentView.swift */; };
 		B4C616682C48B45100720154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C616672C48B45100720154 /* Assets.xcassets */; };
@@ -34,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B47D295F2C56A8CF001B0ADA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B47D29612C56AB37001B0ADA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B47D29632C56ACEC001B0ADA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B47D296C2C56B1C6001B0ADA /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		B4C616602C48B45000720154 /* MRDelta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRDelta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C616632C48B45000720154 /* MRDeltaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDeltaApp.swift; sourceTree = "<group>"; };
 		B4C616652C48B45000720154 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47D29692C56AEE5001B0ADA /* FirebaseDatabase in Frameworks */,
+				B47D29672C56AEE5001B0ADA /* FirebaseAuth in Frameworks */,
+				B47D296B2C56AEE5001B0ADA /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,10 @@
 			children = (
 				B4C616632C48B45000720154 /* MRDeltaApp.swift */,
 				B4C616652C48B45000720154 /* ContentView.swift */,
+				B47D29612C56AB37001B0ADA /* SignUpView.swift */,
+				B47D296C2C56B1C6001B0ADA /* HomePageView.swift */,
+				B47D295F2C56A8CF001B0ADA /* LoginView.swift */,
+				B47D29632C56ACEC001B0ADA /* GoogleService-Info.plist */,
 				B4C616672C48B45100720154 /* Assets.xcassets */,
 				B4C616692C48B45100720154 /* Preview Content */,
 			);
@@ -143,6 +161,11 @@
 			dependencies = (
 			);
 			name = MRDelta;
+			packageProductDependencies = (
+				B47D29662C56AEE5001B0ADA /* FirebaseAuth */,
+				B47D29682C56AEE5001B0ADA /* FirebaseDatabase */,
+				B47D296A2C56AEE5001B0ADA /* FirebaseFirestore */,
+			);
 			productName = MRDelta;
 			productReference = B4C616602C48B45000720154 /* MRDelta.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +238,9 @@
 				Base,
 			);
 			mainGroup = B4C616572C48B45000720154;
+			packageReferences = (
+				B47D29652C56AEE4001B0ADA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B4C616612C48B45000720154 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +259,7 @@
 			files = (
 				B4C6166B2C48B45100720154 /* Preview Assets.xcassets in Resources */,
 				B4C616682C48B45100720154 /* Assets.xcassets in Resources */,
+				B47D29642C56ACEC001B0ADA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47D29622C56AB37001B0ADA /* SignUpView.swift in Sources */,
 				B4C616662C48B45000720154 /* ContentView.swift in Sources */,
+				B47D29602C56A8CF001B0ADA /* LoginView.swift in Sources */,
 				B4C616642C48B45000720154 /* MRDeltaApp.swift in Sources */,
+				B47D296D2C56B1C6001B0ADA /* HomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +612,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B47D29652C56AEE4001B0ADA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.29.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B47D29662C56AEE5001B0ADA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B47D29652C56AEE4001B0ADA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B47D29682C56AEE5001B0ADA /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B47D29652C56AEE4001B0ADA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		B47D296A2C56AEE5001B0ADA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B47D29652C56AEE4001B0ADA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B4C616582C48B45000720154 /* Project object */;
 }
