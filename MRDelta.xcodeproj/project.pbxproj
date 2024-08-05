@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B47D29602C56A8CF001B0ADA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D295F2C56A8CF001B0ADA /* LoginView.swift */; };
+		5ED801262C60102800342001 /* AdvertisementUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED801252C60102800342001 /* AdvertisementUploadView.swift */; };
+		5ED801282C60107100342001 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED801272C60107100342001 /* MainPageView.swift */; };
+		5ED8012A2C60108400342001 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED801292C60108400342001 /* WelcomeView.swift */; };
+		5ED8012C2C6010D300342001 /* DeltaExplorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8012B2C6010D300342001 /* DeltaExplorationView.swift */; };
+		5ED8012E2C60112900342001 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8012D2C60112900342001 /* LoginView.swift */; };
+		5ED801302C6011A300342001 /* DeltaRivalCampaignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8012F2C6011A300342001 /* DeltaRivalCampaignView.swift */; };
+		5ED801322C6011EC00342001 /* VolunteerOpportunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED801312C6011EC00342001 /* VolunteerOpportunityView.swift */; };
+		5ED801342C60121600342001 /* GameLevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED801332C60121600342001 /* GameLevelsView.swift */; };
+		5ED801362C60123400342001 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED801352C60123400342001 /* GameView.swift */; };
+		5ED8013E2C6013A200342001 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5ED8013D2C6013A200342001 /* FirebaseStorage */; };
+		5ED801462C601AA200342001 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED801452C601AA200342001 /* ProfileView.swift */; };
+		5ED8014B2C60250A00342001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C616672C48B45100720154 /* Assets.xcassets */; };
+		5ED8014C2C60256500342001 /* MRDeltaBP2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED8013B2C60131900342001 /* MRDeltaBP2.pdf */; };
+		5ED8014D2C60257400342001 /* hit_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5ED801372C6012F000342001 /* hit_sound.wav */; };
+		5ED8014E2C60257400342001 /* KungFu.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5ED801392C6012FE00342001 /* KungFu.wav */; };
+		5ED8014F2C60257D00342001 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C6166A2C48B45100720154 /* Preview Assets.xcassets */; };
+		5ED801512C60680A00342001 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ED801502C60680A00342001 /* GoogleService-Info.plist */; };
 		B47D29622C56AB37001B0ADA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D29612C56AB37001B0ADA /* SignUpView.swift */; };
-		B47D29642C56ACEC001B0ADA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B47D29632C56ACEC001B0ADA /* GoogleService-Info.plist */; };
 		B47D29672C56AEE5001B0ADA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B47D29662C56AEE5001B0ADA /* FirebaseAuth */; };
 		B47D29692C56AEE5001B0ADA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B47D29682C56AEE5001B0ADA /* FirebaseDatabase */; };
 		B47D296B2C56AEE5001B0ADA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B47D296A2C56AEE5001B0ADA /* FirebaseFirestore */; };
-		B47D296D2C56B1C6001B0ADA /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D296C2C56B1C6001B0ADA /* HomePageView.swift */; };
 		B4C616642C48B45000720154 /* MRDeltaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C616632C48B45000720154 /* MRDeltaApp.swift */; };
 		B4C616662C48B45000720154 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C616652C48B45000720154 /* ContentView.swift */; };
-		B4C616682C48B45100720154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C616672C48B45100720154 /* Assets.xcassets */; };
-		B4C6166B2C48B45100720154 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C6166A2C48B45100720154 /* Preview Assets.xcassets */; };
 		B4C616752C48B45200720154 /* MRDeltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C616742C48B45200720154 /* MRDeltaTests.swift */; };
 		B4C6167F2C48B45200720154 /* MRDeltaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6167E2C48B45200720154 /* MRDeltaUITests.swift */; };
 		B4C616812C48B45200720154 /* MRDeltaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C616802C48B45200720154 /* MRDeltaUITestsLaunchTests.swift */; };
@@ -41,10 +53,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B47D295F2C56A8CF001B0ADA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5ED801252C60102800342001 /* AdvertisementUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementUploadView.swift; sourceTree = "<group>"; };
+		5ED801272C60107100342001 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		5ED801292C60108400342001 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		5ED8012B2C6010D300342001 /* DeltaExplorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaExplorationView.swift; sourceTree = "<group>"; };
+		5ED8012D2C60112900342001 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5ED8012F2C6011A300342001 /* DeltaRivalCampaignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaRivalCampaignView.swift; sourceTree = "<group>"; };
+		5ED801312C6011EC00342001 /* VolunteerOpportunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerOpportunityView.swift; sourceTree = "<group>"; };
+		5ED801332C60121600342001 /* GameLevelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelsView.swift; sourceTree = "<group>"; };
+		5ED801352C60123400342001 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		5ED801372C6012F000342001 /* hit_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit_sound.wav; sourceTree = "<group>"; };
+		5ED801392C6012FE00342001 /* KungFu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = KungFu.wav; sourceTree = "<group>"; };
+		5ED8013B2C60131900342001 /* MRDeltaBP2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MRDeltaBP2.pdf; sourceTree = "<group>"; };
+		5ED801452C601AA200342001 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5ED801502C60680A00342001 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B47D29612C56AB37001B0ADA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		B47D29632C56ACEC001B0ADA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B47D296C2C56B1C6001B0ADA /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		B4C616602C48B45000720154 /* MRDelta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRDelta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C616632C48B45000720154 /* MRDeltaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDeltaApp.swift; sourceTree = "<group>"; };
 		B4C616652C48B45000720154 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B47D29692C56AEE5001B0ADA /* FirebaseDatabase in Frameworks */,
+				5ED8013E2C6013A200342001 /* FirebaseStorage in Frameworks */,
 				B47D29672C56AEE5001B0ADA /* FirebaseAuth in Frameworks */,
 				B47D296B2C56AEE5001B0ADA /* FirebaseFirestore in Frameworks */,
 			);
@@ -110,11 +134,22 @@
 			children = (
 				B4C616632C48B45000720154 /* MRDeltaApp.swift */,
 				B4C616652C48B45000720154 /* ContentView.swift */,
+				5ED801292C60108400342001 /* WelcomeView.swift */,
+				5ED8012D2C60112900342001 /* LoginView.swift */,
 				B47D29612C56AB37001B0ADA /* SignUpView.swift */,
-				B47D296C2C56B1C6001B0ADA /* HomePageView.swift */,
-				B47D295F2C56A8CF001B0ADA /* LoginView.swift */,
-				B47D29632C56ACEC001B0ADA /* GoogleService-Info.plist */,
+				5ED801272C60107100342001 /* MainPageView.swift */,
+				5ED8012B2C6010D300342001 /* DeltaExplorationView.swift */,
+				5ED8012F2C6011A300342001 /* DeltaRivalCampaignView.swift */,
+				5ED801312C6011EC00342001 /* VolunteerOpportunityView.swift */,
+				5ED801252C60102800342001 /* AdvertisementUploadView.swift */,
+				5ED801452C601AA200342001 /* ProfileView.swift */,
+				5ED801332C60121600342001 /* GameLevelsView.swift */,
+				5ED801352C60123400342001 /* GameView.swift */,
 				B4C616672C48B45100720154 /* Assets.xcassets */,
+				5ED801372C6012F000342001 /* hit_sound.wav */,
+				5ED801502C60680A00342001 /* GoogleService-Info.plist */,
+				5ED801392C6012FE00342001 /* KungFu.wav */,
+				5ED8013B2C60131900342001 /* MRDeltaBP2.pdf */,
 				B4C616692C48B45100720154 /* Preview Content */,
 			);
 			path = MRDelta;
@@ -154,7 +189,7 @@
 			buildPhases = (
 				B4C6165C2C48B45000720154 /* Sources */,
 				B4C6165D2C48B45000720154 /* Frameworks */,
-				B4C6165E2C48B45000720154 /* Resources */,
+				5ED801492C601F1400342001 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +200,7 @@
 				B47D29662C56AEE5001B0ADA /* FirebaseAuth */,
 				B47D29682C56AEE5001B0ADA /* FirebaseDatabase */,
 				B47D296A2C56AEE5001B0ADA /* FirebaseFirestore */,
+				5ED8013D2C6013A200342001 /* FirebaseStorage */,
 			);
 			productName = MRDelta;
 			productReference = B4C616602C48B45000720154 /* MRDelta.app */;
@@ -253,13 +289,16 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B4C6165E2C48B45000720154 /* Resources */ = {
+		5ED801492C601F1400342001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C6166B2C48B45100720154 /* Preview Assets.xcassets in Resources */,
-				B4C616682C48B45100720154 /* Assets.xcassets in Resources */,
-				B47D29642C56ACEC001B0ADA /* GoogleService-Info.plist in Resources */,
+				5ED8014F2C60257D00342001 /* Preview Assets.xcassets in Resources */,
+				5ED8014D2C60257400342001 /* hit_sound.wav in Resources */,
+				5ED8014E2C60257400342001 /* KungFu.wav in Resources */,
+				5ED8014C2C60256500342001 /* MRDeltaBP2.pdf in Resources */,
+				5ED8014B2C60250A00342001 /* Assets.xcassets in Resources */,
+				5ED801512C60680A00342001 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +324,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B47D29622C56AB37001B0ADA /* SignUpView.swift in Sources */,
+				5ED801462C601AA200342001 /* ProfileView.swift in Sources */,
+				5ED801322C6011EC00342001 /* VolunteerOpportunityView.swift in Sources */,
 				B4C616662C48B45000720154 /* ContentView.swift in Sources */,
-				B47D29602C56A8CF001B0ADA /* LoginView.swift in Sources */,
 				B4C616642C48B45000720154 /* MRDeltaApp.swift in Sources */,
-				B47D296D2C56B1C6001B0ADA /* HomePageView.swift in Sources */,
+				5ED801302C6011A300342001 /* DeltaRivalCampaignView.swift in Sources */,
+				5ED8012A2C60108400342001 /* WelcomeView.swift in Sources */,
+				5ED8012C2C6010D300342001 /* DeltaExplorationView.swift in Sources */,
+				5ED8012E2C60112900342001 /* LoginView.swift in Sources */,
+				5ED801262C60102800342001 /* AdvertisementUploadView.swift in Sources */,
+				5ED801342C60121600342001 /* GameLevelsView.swift in Sources */,
+				5ED801362C60123400342001 /* GameView.swift in Sources */,
+				5ED801282C60107100342001 /* MainPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MRDelta/Preview Content\"";
+				DEVELOPMENT_TEAM = DH4HAL4SVY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -464,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SistersOfImpact.MRDelta;
+				PRODUCT_BUNDLE_IDENTIFIER = SistersOfImpact.MRDeltaFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -480,6 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MRDelta/Preview Content\"";
+				DEVELOPMENT_TEAM = DH4HAL4SVY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -492,7 +541,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SistersOfImpact.MRDelta;
+				PRODUCT_BUNDLE_IDENTIFIER = SistersOfImpact.MRDeltaFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -625,6 +674,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5ED8013D2C6013A200342001 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B47D29652C56AEE4001B0ADA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		B47D29662C56AEE5001B0ADA /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B47D29652C56AEE4001B0ADA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -2,79 +2,80 @@
 //  LoginView.swift
 //  MRDelta
 //
-//  Created by Zhifu Xie on 7/28/24.
+//  Created by Zhifu Xie on 8/4/24.
 //
 
 import SwiftUI
-import FirebaseAuth
+import Firebase
 
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
-    @State private var loginError = ""
-    @State private var isLoggedIn = false
-    
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    @Binding var isLoggedIn: Bool
+    @Binding var isOrganizationUser: Bool
+
     var body: some View {
-        if isLoggedIn {
-            HomePageView()
-        } else {
+        ZStack {
+            Color.palepink.ignoresSafeArea()
             VStack {
+                Image("MRDeltaLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .padding(.top, 50)
+
+                Text("Together, we can make a difference!")
+                    .font(.headline)
+                    .padding()
+
+                Spacer()
+
                 TextField("Email", text: $email)
-                    .keyboardType(.emailAddress)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                    .background(Color(UIColor.systemGray6))
-                    .cornerRadius(8)
-                    .padding(.bottom, 20)
-                
+
                 SecureField("Password", text: $password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                    .background(Color(UIColor.systemGray6))
-                    .cornerRadius(8)
-                    .padding(.bottom, 20)
-                
-                if !loginError.isEmpty {
-                    Text(loginError)
-                        .foregroundColor(.red)
-                        .padding(.bottom, 20)
-                }
-                
-                Button(action: {
-                    login()
-                }) {
-                    Text("Login")
-                        .font(.title)
+
+                Button(action: logIn) {
+                    Text("Log In")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .cornerRadius(8)
                 }
+                .padding()
+
+                Spacer()
             }
             .padding()
-            .navigationTitle("Login")
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
         }
     }
-    
-    func login() {
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            if let error = error {
-                loginError = error.localizedDescription
-                return
-            }
-            
-            guard authResult?.user != nil else {
-                loginError = "Failed to get user information."
-                return
-            }
-            
-            // Successfully logged in
-            isLoggedIn = true
-        }
-    }
-}
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
+    func logIn() {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                self.alertMessage = error.localizedDescription
+                self.showAlert = true
+            } else if let user = result?.user {
+                let db = Firestore.firestore()
+                db.collection("users").document(user.uid).getDocument { document, error in
+                    if let document = document, document.exists {
+                        self.isOrganizationUser = document.get("isOrganization") as? Bool ?? false
+                        self.isLoggedIn = true
+                    } else {
+                        self.alertMessage = "Document does not exist"
+                        self.showAlert = true
+                    }
+                }
+            }
+        }
     }
 }
 
