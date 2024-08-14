@@ -43,7 +43,7 @@ struct LoginView: View {
                 Button(action: logIn) {
                     Text("Log In")
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.oliveGreen)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }

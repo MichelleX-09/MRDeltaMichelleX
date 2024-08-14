@@ -12,6 +12,10 @@ struct DeltaExplorationView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
+                VStack {Text("Delta Explorer")
+                        .font(.largeTitle) // Customize the font size here
+                        .bold() // Optionally make it bold}
+                }
                 VStack(spacing: 20) {
                     OverviewSection()
                     CrisisSection()
@@ -21,8 +25,8 @@ struct DeltaExplorationView: View {
                 .padding()
             }
             .background(Color.palepink.ignoresSafeArea())
-            .navigationTitle("Delta Explorer")
-            .navigationBarTitleDisplayMode(.inline)
+            //.navigationTitle("Delta Explorer")
+            //.navigationBarTitleDisplayMode(.inline)
         }
     }
 }
@@ -43,7 +47,7 @@ struct OverviewSection: View {
             }) {
                 Text("Delta Overview")
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.oliveGreen)
                     .foregroundColor(.white)
                     .cornerRadius(8)
             }
@@ -75,7 +79,7 @@ struct CrisisSection: View {
             }) {
                 Text("Delta Crisis")
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.oliveGreen)
                     .foregroundColor(.white)
                     .cornerRadius(8)
             }
@@ -108,7 +112,7 @@ struct RestorationSection: View {
             }) {
                 Text("Delta Restoration")
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.oliveGreen)
                     .foregroundColor(.white)
                     .cornerRadius(8)
             }
@@ -141,7 +145,7 @@ var body: some View {
         }) {
             Text("Delta Community Guide")
                 .padding()
-                .background(Color.blue)
+                .background(Color.oliveGreen)
                 .foregroundColor(.white)
                 .cornerRadius(8)
         }

@@ -30,38 +30,181 @@ struct ProfileView: View {
                 VStack {
                     Text("Profile")
                         .font(.largeTitle)
+                        .fontWeight(.semibold)
                         .padding(.top, 20) // Adjust top padding as needed
+                    Image("profiledone")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
 
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Full Name: \(user_name)")
-                        Text("Is Organization: \(isOrganization ? "Yes" : "No")")
-                        Text("Like Oyster Restoration: \(interestingOysterRestoration ? "Yes" : "No")")
-                        Text("Interested in Tree Plant: \(interestingTreePlant ? "Yes" : "No")")
-                        Text("Interested in Bird Observation: \(interestingBirdObservation ? "Yes" : "No")")
-                        Text("Can Lift 50+ lb: \(canLift50pluslb ? "Yes" : "No")")
-                        Text("Can Swim: \(canSwim ? "Yes" : "No")")
-                        Text("Phone Number: \(phoneNumber)")
-                        Text("Address: \(address)")
-                        Text("Earned Points: \(earnedPoints)")
-                        Text("Badge Status: \(badgeStatus(for: earnedPoints))")
+                        Text("Full Name: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(user_name)")
+
+                        Text("Is Organization: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(isOrganization ? "Yes" : "No")")
+
+                        Text("Like Oyster Restoration: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(interestingOysterRestoration ? "Yes" : "No")")
+
+                        Text("Interested in Tree Plant: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(interestingTreePlant ? "Yes" : "No")")
+
+                        Text("Interested in Bird Observation: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(interestingBirdObservation ? "Yes" : "No")")
+
+                        Text("Can Lift 50+ lb: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(canLift50pluslb ? "Yes" : "No")")
+
+                        Text("Can Swim: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(canSwim ? "Yes" : "No")")
+
+                        Text("Phone Number: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(phoneNumber)")
+
+                        Text("Address: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(address)")
+
+                        Text("Earned Points: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.semibold) +
+                        Text("\(earnedPoints)")
+
+                        Text("Badge Level: ")
+                            .foregroundColor(.purple)
+                            .fontWeight(.bold) +
+                        Text("\(badgeStatus(for: earnedPoints))")
                             .bold()
+
                     }
                     .padding()
                     .background(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 5)
                     .padding()
-
-                    Text("Badge Status is assigned based on your Earned Points.  Bronze: 10+; Palladium: 1000+; Platinum: 2500+; Silver:5000+, and Gold: 10000+")
-                        .padding()
-                        .multilineTextAlignment(.center)
-
+                    VStack{
+                        Text("Badge level is based on your Earned Points.")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .padding()
+                            .multilineTextAlignment(.center)
+                        HStack{
+                            ZStack{
+                                Circle()
+                                    .fill(Color.bronze)
+                                    .frame(width: 70, height: 70)
+                                    .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                                VStack{
+                                    Text("Bronze: ")
+                                        .font(.system(size: 15))
+                                        .foregroundColor(.black)
+                                        .shadow(color: .white, radius: 2, x: 1, y: 1)
+                                    Text("10+")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.black)
+                                        .shadow(color: .white, radius: 2, x: 1, y: 1)
+                                }
+                            }
+                            .frame(maxWidth: 100)
+                            
+                            ZStack{
+                                Circle()
+                                    .fill(Color.palladium)
+                                    .frame(width: 70, height: 70)
+                                    .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                                VStack{
+                                    Text("Palladium:")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.white)
+                                        .shadow(color: .black, radius: 2, x: 1, y: 1)
+                                    Text("1000+")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.white)
+                                        .shadow(color: .black, radius: 2, x: 1, y: 1)
+                                }
+                            }
+                            .frame(maxWidth: 100)
+                            
+                            ZStack{
+                                Circle()
+                                    .fill(Color.platinum)
+                                    .frame(width: 70, height: 70)
+                                    .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                                VStack{
+                                    Text("Platinum: ")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.black)
+                                        .shadow(color: .white, radius: 2, x: 1, y: 1)
+                                    Text("2500+")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.black)
+                                        .shadow(color: .white, radius: 2, x: 1, y: 1)
+                                }
+                            }
+                            .frame(maxWidth: 100)
+                            
+                            ZStack{
+                                Circle()
+                                    .fill(Color.silver)
+                                    .frame(width: 70, height: 70)
+                                    .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                                VStack{
+                                    Text("Silver: ")
+                                        .font(.system(size: 15))
+                                        .foregroundColor(.white)
+                                        .shadow(color: .black, radius: 2, x: 1, y: 1)
+                                    Text("5000+")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.white)
+                                        .shadow(color: .black, radius: 2, x: 1, y: 1)
+                                }
+                            }
+                            .frame(maxWidth: 100)
+                            
+                            ZStack{
+                                Circle()
+                                    .fill(Color.gold)
+                                    .frame(width: 70, height: 70)
+                                    .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                                VStack{
+                                    Text("Gold: ")
+                                        .font(.system(size: 15))
+                                        .foregroundColor(.black)
+                                        .shadow(color: .white, radius: 2, x: 1, y: 1)
+                                    Text("10000+")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.black)
+                                        .shadow(color: .white, radius: 2, x: 1, y: 1)
+                                }
+                            }
+                            .frame(maxWidth: 100)
+                            
+                        }
+                    }
                     Button(action: {
                         showGameLevels = true
                     }) {
                         Text("Award: Game Time")
                             .padding()
-                            .background(Color.blue)
+                            .background(Color.oliveGreen)
                             .foregroundColor(.white)
                             .cornerRadius(8)
                     }

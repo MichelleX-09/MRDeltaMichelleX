@@ -9,14 +9,14 @@ import SwiftUI
 
 struct MainPageView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack{
                 VStack {
                     Image("MRDeltaLogo")
                         .resizable()
                         .scaledToFit()
                         .frame(height: 180)
-                        .padding(.bottom,10)
+                        .padding(.bottom, 10)
                     
                     Text("Together, we can make a difference.")
                         .padding()
@@ -29,16 +29,15 @@ struct MainPageView: View {
                         NavigationLink(destination: DeltaExplorationView()) {
                             Text("Delta Explorer")
                                 .padding()
-                                .background(Color.blue)
+                                .background(Color.oliveGreen)
                                 .foregroundColor(.white)
                                 .cornerRadius(8)
                         }
                         
-                        
                         NavigationLink(destination: DeltaRivalCampaignView()) {
                             Text("Delta Revival Campaign")
                                 .padding()
-                                .background(Color.blue)
+                                .background(Color.oliveGreen)
                                 .foregroundColor(.white)
                                 .cornerRadius(8)
                         }
@@ -46,7 +45,7 @@ struct MainPageView: View {
                         NavigationLink(destination: VolunteerOpportunityView()) {
                             Text("Volunteer Opportunity")
                                 .padding()
-                                .background(Color.blue)
+                                .background(Color.oliveGreen)
                                 .foregroundColor(.white)
                                 .cornerRadius(8)
                         }
@@ -54,7 +53,7 @@ struct MainPageView: View {
                         NavigationLink(destination: ProfileView()) {
                             Text("Profile")
                                 .padding()
-                                .background(Color.blue)
+                                .background(Color.oliveGreen)
                                 .foregroundColor(.white)
                                 .cornerRadius(8)
                         }
@@ -64,13 +63,16 @@ struct MainPageView: View {
                     Spacer()
                     
                 }
-                .navigationTitle("Main Page")
+                .navigationTitle("Home Page")
                 .padding()
                 .background(Color.palepink.ignoresSafeArea())
             }
         }
     }
 }
-#Preview {
-    MainPageView()
+
+struct MainPageView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainPageView()
+    }
 }

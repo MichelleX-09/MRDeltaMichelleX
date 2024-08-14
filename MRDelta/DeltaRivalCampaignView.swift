@@ -15,7 +15,7 @@ struct DeltaRivalCampaignView: View {
     @State private var showingShareSheet = false
     @State private var showingDeleteAlert = false
     @State private var userPoints = 0
-    @State private var adImages: [String] = [] // Use URLs from Firestore
+    @State private var adImages: [String] = []
     @State private var adImageURLs: [String] = []
     @State private var isOrganizationUser = false
     @State private var imageToDelete: String?
@@ -24,80 +24,89 @@ struct DeltaRivalCampaignView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                if  !isOrganizationUser{
-                    Text("Double click a Campaign Picture to Share to Earn Points")
-                        .font(.headline)
-                        .padding()
-                }
-
-                if  isOrganizationUser{
-                    Text("Double click a Campaign Picture to Share")
-                        .font(.headline)
-                        .padding()
-                }
-                
-                ScrollView(.vertical) {
-                    VStack(spacing: 10) {
-                        ForEach(adImageURLs, id: \.self) { url in
-                            AsyncImage(url: URL(string: url)) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 400, height: 400)
-                                    .onTapGesture {
-                                        self.imageToShareURL = URL(string: url)
-                                        loadImage(from: self.imageToShareURL!) { uiImage in
-                                            self.imageToShare = uiImage
-                                            self.showingShareSheet = true
-                                        }
+            ZStack{
+                Color.palepink.ignoresSafeArea()
+                VStack{
+                    VStack {
+                        if  !isOrganizationUser{
+                            Text("Double click a Campaign Picture to Share to Earn Points")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .padding()
+                        }
+                        
+                        if  isOrganizationUser{
+                            Text("Double click a Campaign Picture to Share")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .padding()
+                        }
+                        
+                        ScrollView(.vertical) {
+                            VStack(spacing: 10) {
+                                ForEach(adImageURLs, id: \.self) { url in
+                                    AsyncImage(url: URL(string: url)) { image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 400, height: 400)
+                                            .onTapGesture {
+                                                self.imageToShareURL = URL(string: url)
+                                                loadImage(from: self.imageToShareURL!) { uiImage in
+                                                    self.imageToShare = uiImage
+                                                    self.showingShareSheet = true
+                                                }
+                                            }
+                                    } placeholder: {
+                                        ProgressView()
                                     }
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            .contextMenu {
-                                if isOrganizationUser {
-                                    Button(action: {
-                                        // Mark the image for deletion
-                                        imageToDelete = url
-                                        showingDeleteAlert = true
-                                    }) {
-                                        Text("Delete")
-                                        Image(systemName: "trash")
+                                    .contextMenu {
+                                        if isOrganizationUser {
+                                            Button(action: {
+                                                // Mark the image for deletion
+                                                imageToDelete = url
+                                                showingDeleteAlert = true
+                                            }) {
+                                                Text("Delete")
+                                                Image(systemName: "trash")
+                                            }
+                                        }
                                     }
                                 }
                             }
-                        }
-                    }
-                    .padding()
-                }
-
-                if let selectedImage = selectedImage {
-                    Image(uiImage: selectedImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 300, height: 300)
-                }
-
-                Text("Your Earned Points: \(userPoints)")
-                    .padding()
-                if isOrganizationUser {
-                    Text("Select a campain to delete by long press")
-                        .padding()
-                }
-/*                if isOrganizationUser {
-                    NavigationLink(destination: AdvertisementUploadView()) {
-                        Text("Manage Advertisements")
                             .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
+                        }
+                        
+                        if let selectedImage = selectedImage {
+                            Image(uiImage: selectedImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 300, height: 300)
+                        }
+                        
+                        Text("Your Earned Points: \(userPoints)")
+                            .fontWeight(.semibold)
+                            .padding()
+  /*                      if isOrganizationUser {
+                            Text("Select a campain to delete by long press")
+                                .fontWeight(.semibold)
+                                .padding()
+                        }*/
                     }
-                    .padding()
+                        /*                if isOrganizationUser {
+                         NavigationLink(destination: AdvertisementUploadView()) {
+                         Text("Manage Advertisements")
+                         .padding()
+                         .background(Color.blue)
+                         .foregroundColor(.white)
+                         .cornerRadius(8)
+                         }
+                         .padding()
+                         }
+                         */
+                        Spacer()
+                    }
                 }
-*/
-                Spacer()
-            }
             .sheet(isPresented: $showingShareSheet, onDismiss: updatePoints) {
                 if let imageToShare = imageToShare {
                     ShareSheet(activityItems: [imageToShare])
@@ -265,3 +274,4 @@ struct ShareSheet: UIViewControllerRepresentable {
 
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
+

@@ -129,7 +129,7 @@ struct Level0GameView: View {
                 }) {
                     Text(questions[currentQuestionIndex].choices[index])
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.oliveGreen)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
@@ -143,8 +143,8 @@ struct Level0GameView: View {
             
             if showAlert {
                 Text(alertMessage)
-                    .font(.title)
-                    .foregroundColor(.green)
+                    .font(.title3)
+                    .foregroundColor(.purple)
                     .padding()
             }
         }
@@ -302,7 +302,7 @@ struct Level1GameView: View {
                 }) {
                     Text(questions[currentQuestionIndex].choices[index])
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.oliveGreen)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
@@ -316,8 +316,8 @@ struct Level1GameView: View {
             
             if showAlert {
                 Text(alertMessage)
-                    .font(.title)
-                    .foregroundColor(.green)
+                    .font(.title3)
+                    .foregroundColor(.purple)
                     .padding()
             }
         }
@@ -413,8 +413,8 @@ struct Level2GameView: View {
             
             if showAlert {
                 Text(alertMessage)
-                    .font(.title)
-                    .foregroundColor(.green)
+                    .font(.title3)
+                    .foregroundColor(.purple)
                     .padding()
             }
         }

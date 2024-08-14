@@ -65,7 +65,7 @@
 		5ED801372C6012F000342001 /* hit_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit_sound.wav; sourceTree = "<group>"; };
 		5ED801392C6012FE00342001 /* KungFu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = KungFu.wav; sourceTree = "<group>"; };
 		5ED8013B2C60131900342001 /* MRDeltaBP2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MRDeltaBP2.pdf; sourceTree = "<group>"; };
-		5ED801452C601AA200342001 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5ED801452C601AA200342001 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		5ED801502C60680A00342001 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B47D29612C56AB37001B0ADA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B4C616602C48B45000720154 /* MRDelta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRDelta.app; sourceTree = BUILT_PRODUCTS_DIR; };

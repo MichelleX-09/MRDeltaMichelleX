@@ -22,37 +22,39 @@ struct WelcomeView: View {
                 Image("MRDeltaLogo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 150, height: 150)
-                    .padding(.top, 50)
+                    .frame(width: 200, height: 200)
+                    .padding(.top, 70)
 
-                Text("Together, we can make a difference!")
-                    .font(.headline)
+                Text("Welcome to MRDelta!!")
+                    .font(.title)
+                    .fontWeight(.bold)
                     .padding()
 
                 Spacer()
-
-                NavigationLink(destination: SignUpView(isLoggedIn: $isLoggedIn, isOrganizationUser: $isOrganizationUser)) {
-                    Text("Sign Up")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
+                HStack{
+                    NavigationLink(destination: SignUpView(isLoggedIn: $isLoggedIn, isOrganizationUser: $isOrganizationUser)) {
+                        Text("Sign Up")
+                            .padding()
+                            .background(Color.oliveGreen)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                    .padding()
+                    
+                    NavigationLink(destination: LoginView(isLoggedIn: $isLoggedIn, isOrganizationUser: $isOrganizationUser)) {
+                        Text("  Log In  ")
+                            .padding()
+                            .background(Color.oliveGreen)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                    .padding()
                 }
-                .padding()
-
-                NavigationLink(destination: LoginView(isLoggedIn: $isLoggedIn, isOrganizationUser: $isOrganizationUser)) {
-                    Text("Log In")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
-                .padding()
 
                 Button(action: logInVolunteer) {
                     Text("Guest View (Volunteer)")
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.oliveGreen)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
@@ -61,7 +63,7 @@ struct WelcomeView: View {
                 Button(action: logInOrganization) {
                     Text("Guest View (Organization)")
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.oliveGreen)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
