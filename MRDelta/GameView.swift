@@ -18,14 +18,11 @@ struct GameView: View {
                 .padding()
 
             if level == 1 {
-                Level0GameView()
+                Level1GameView()
             } else if level == 2  {
-                // Placeholder for other levels
-                //Text("Game content for level \(level) goes here.")
-                 //   .padding()
-                Level20GameView()
-            } else if level == 3 { Level1GameView()
-            } else if level == 4 { Level2GameView() }
+                Level2GameView()
+            } else if level == 3 { Level3GameView()
+            } else if level == 4 { Level4GameView() }
             else{ Level5GameView()}
 
             Spacer()
@@ -47,19 +44,6 @@ struct GameView: View {
 }
 
 
-struct Level4GameView: View {
-    var body: some View {
-        Text("Level 3 Game View")
-            .padding()
-        Text("Platinum Challenge")
-            .padding()
-            .background(Color.palepink)
-            .foregroundColor(.black)
-            .cornerRadius(8)
-
-
-    }
-}
 
 
 struct Level5GameView: View {
@@ -78,8 +62,8 @@ struct Level5GameView: View {
     }
 }
 
-
-struct Level0GameView: View {
+// Level 1: MR Delta General Knowledge
+struct Level1GameView: View {
     @State private var currentQuestionIndex = 0
     @State private var score = 0
     @State private var showAlert = false
@@ -179,9 +163,9 @@ struct Level0GameView: View {
 
 
 
-// General questions.
+// Level 3: General questions.
 
-struct Level1GameView: View {
+struct Level3GameView: View {
     @State private var currentQuestionIndex = 0
     @State private var score = 0
     @State private var showAlert = false
@@ -360,12 +344,12 @@ struct Question {
 
 
 
-//Level 2 revised
+// Level 4: Collect fruits
 
 import SwiftUI
 import AVFoundation
 
-struct Level2GameView: View {
+struct Level4GameView: View {
     @State private var items: [GameItem] = []
     @State private var score = 0
     @State private var gameTime = 30
@@ -508,7 +492,7 @@ struct Level2GameView_Previews: PreviewProvider {
 }
 
 
-// Game 4 Hanoi Tower (not functioning)
+// Level 2: kill bugs
 
 
 
@@ -516,7 +500,7 @@ struct Level2GameView_Previews: PreviewProvider {
 import SwiftUI
 import AVFoundation
 
-struct Level20GameView: View {
+struct Level2GameView: View {
     @State private var targetPositions: [CGPoint] = Array(repeating: CGPoint(x: 0, y: 0), count: 5)
     @State private var score = 0
     @State private var timer: Timer? = nil
@@ -621,8 +605,8 @@ struct Level20GameView: View {
     }
 }
 
-struct Level20GameView_Previews: PreviewProvider {
+struct Level4GameView_Previews: PreviewProvider {
     static var previews: some View {
-        Level20GameView()
+        Level4GameView()
     }
 }
